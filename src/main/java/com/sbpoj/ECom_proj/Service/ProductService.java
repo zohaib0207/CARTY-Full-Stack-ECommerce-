@@ -38,4 +38,8 @@ public class ProductService {
         product.setImageData(imageFile.getBytes());
         return repo.save(product);
     }
+
+    public List<Product> searchProducts(String keyword) {
+        return repo.searchProduct(keyword);
+    }
 }
